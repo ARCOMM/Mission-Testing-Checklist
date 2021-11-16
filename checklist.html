@@ -113,5 +113,346 @@ equipment.
 enemy fireteam level AT
 </p>
 
+<h2>Assets</h2>
+
+<p>
+• DLC assets / Weapons should only be given to a handful of slots and the slots
+should include the name of the dlc required in the lobby.
+<br />
+◦ TMF Autotest throws warnings for DLC usage.
+<br />
+• Vehicle inventories should be clear of default items or have relevant
+equipment for missions. TMF Vic Gear is still unreliable, make sure it is not
+being used
+<br />
+• Supplies such as ammo must fit the given weapon
+<br />
+• If you are utilizing any Refuel, Repair, Rearm (RRR) vehicles/assets, please
+ensure their respective ACE Settings are set up. Some vehicles retrieve these
+attributes automatically, but double check to be sure.
+<br />
+• Little Birds should use the MELB variant (higher quality)
+<br />
+• If there is enemy armour, ensure player equipment is capable and or reliable,
+and that they have adequate quantities of it.
+<br />
+• Players must be able to destroy enemy armour
+<br />
+◦ Eg. If the enemy has T-72s, give the players ATGMs like Javelins or Hellfires
+<br />
+</p>
+
+<h2>Intel</h2>
+
+<p>
+<br />
+• Map markers must be concise and not excessive. Objective markers must not be
+black (should not blend in with player markers).
+<br />
+• Briefing must not contain typos.
+<br />
+• Briefing needs to have clarity (simple objective bullet points)
+<br />
+◦ Situation is the place to add lore and fluff to your narrative.
+<br />
+◦ Mission tab should be bullet points of the tasks to be completed by players,
+unless special circumstances.
+<br />
+• Briefing must be divided into appropriate sections
+<br />
+• Briefing must make use of all fields excluding special tasks and logistics,
+given that there is no relevant information for those fields.
+<br />
+• Logistics section should contain the amount of seats per transport vehicle
+(if any)
+<br />
+• The “TMF Spectator Objective” Module can be used to highlight points of
+interest (Hidden objectives, hostages, etc) for spectators.
+<br />
+• If there is a chance of betrayal or there is an element of risk to the
+cooperation it must be observable in at least a couple of locations. Either by
+outright stating it in mission task and one other place, or by implying tension
+in some form in situation and one other place. This must also be specified in
+Admin for tester awareness.
+<br />
+</p>
+
+<h2>Loadouts</h2>
+
+<p><b>
+When checking loadouts you should load into a multiplayer instance of the
+mission and use the loadout command (#loadout)
+</b></p>
+
+<p>
+• Loadouts must not contain anything related to ACRE.
+<br />
+◦ All radios must be assigned in the TMF ACRE Menu.
+<br />
+• The “example loadout” in the TMF Mission Template should not be deleted or
+edited.
+<br />
+• New loadouts can be added by duplicating and renaming this file, and adding a
+new file reference in the description.ext.
+<br />
+• Avoid using magnified optics unless by mission design and only for special
+roles. Anything 1x-2x is acceptable for a general rifleman.
+<br />
+• If night mission ensure loadouts have map flashlight
+(unless by mission design)
+<br />
+• Night missions should provide sufficient illumination or NVGs (mortar,
+flashlights, hand flares) and their amount is sufficient for the mission length.
+<br />
+• AAR must have correct ammo for AR
+<br />
+◦ Binoculars should also be added.
+<br />
+• Leadership loadouts should have Map tools and binoculars
+<br />
+• All ammo must fit the given weapon (magazines, GL rounds)
+<br />
+• Most infantry elements should have entrenchment tools at all times, with the
+only exception being missions that specifically calls for them to not have it.
+<br />
+• Some equipment must be assigned via macros defined in
+<a href="https://github.com/ARCOMM/arc_misc/blob/master/addons/tmf_loadouts/macros.inc">arc_misc</a>.
+<br />
+◦ All units must include the <b>MEDICAL_R</b> macro in <b>items[]</b> for basic medical
+equipment
+<br />
+◦ Combat Life Savers must include the <b>MEDICAL_CLS</b> macro in
+<b>backpackItems[]</b> for specialist medical equipment
+<br />
+◦ Medics must include the <b>MEDICAL_M</b> macro in <b>backpackItems[]</b> for
+specialist medical equipment
+<br />
+◦ Forward Air Controllers must use the <b>FAC_GEAR</b> macro in
+<b>backpackItems[]</b>
+<br />
+◦ Mortar team leader must use the <b>MTR_GEAR</b> macro in <b>items[]</b>
+<br />
+• When adding multiple of the same item, <b>LIST_n(x)</b> macros must be used
+<br />
+• A CLS is a rifleman first, medic later. Squad medics should always have a
+greater amount of medical supplies.
+<br />
+• FAC loadout has coloured smokes, both hand and GL (red for enemy, green for
+friendly, purple for landing zones)
+<br />
+◦ Minimum of 6 of each color
+<br />
+• FAC has a long range radio,Laser designator(batteries), Radio spike.
+<br />
+• Map markers in TMF Orbat settings are in proper squad hierarchy
+<br />
+• Radios are correctly set and frequencies allocated if used via TMF ACRE menu
+<br />
+• Map markers in TMF Orbat settings are in proper squad hierarchy
+<br />
+• Pilots should have high quality night vision.
+<br />
+• Vehicle crew must have backpacks for toolkits
+<br />
+• Pilots and vehicle crew must have toolkits (either on person or in vehicle).
+<br />
+◦ Backpacks are required if toolkits are provided.
+<br />
+◦ The amount of toolkits can be changed at the Mission Makers discretion.
+<br />
+• Leadership, pilots and vehicle crew should have a GPS (unless by mission
+design)
+<br />
+• If a nighttime mission or expected to be, all elements including MG’s, to be
+equipped with flash hiders or suppressors unless specified not to by mission
+design.
+<br />
+</p>
+
+<h2>Mechanics</h2>
+
+<p>
+• Expected amount of passengers can load into the given transport vehicle(s) without many extra vehicles. Excluding vehicles with dedicated crew, convoys must not exceed 3 vehicles per squad.
+<br />
+• Sling loaded assets must be able to be sling loaded
+<br />
+• Triggers must work as intended and be double checked for locality
+<br />
+◦ For server-only triggers ensure “server only” is checked
+<br />
+• Scripted mechanics must work as intended. Performance must be kept in mind.
+<br />
+• If MicroDAGR’s are included in the loadout; Consider also adding GPS terminal
+- Whilst MicroDAGR’s are useful for the odd specialist role and non-inclusion
+of player unit markers, GPS are often better in a HUD sense and adds map
+markers.
+<br />
+• Be mindful of editor placed objects for performance reasons
+<br />
+◦ Compositions are great indicators of performance issues
+<br />
+◦ Disable simulation on objects that will not be moved
+<br />
+◦ When testing be mindful of locked layers. These can be hiding extraneous
+objects.
+<br />
+• Weather and time of day should be interesting
+<br />
+◦ We don’t want every mission to be clear day or night. If possible, make time
+of day logical to the mission in question.
+<br />
+• Moon phases can be used to adjust light levels in night missions. These
+settings can be found and the date and time settings for the mission.
+<br />
+</p>
+
+<h2>Misc</h2>
+
+<p>
+<br />
+• Weather and time of day should be interesting
+<br />
+• There must not be any land mines that are capable of instantly killing player
+infantry without adequate warnings about location.
+<br />
+• An interesting banner image and map screenshot must be uploaded to ARCHUB
+<br />
+• Mission must not be overly large, and must be reasonably concluded in the
+respective time limits.
+<br />
+◦ Cooperative missions must not exceed 2 hours (including safestart).
+<br />
+◦ Adversarial missions must not exceed 1 hour (including safestart).
+<br />
+◦ Objectives should be unique and precise (EX: capture the command post,
+kill the spy)
+<br />
+◦ Clearing a town is not a suitable mission objective, it is better left as a
+byproduct of player strategy/tactics
+<br />
+• Think of the mission as a player and if you see something that needs testing,
+test it
+<br />
+• Imagine possible plans the players might choose for attack/defence and ensure
+mission still functions with those plans in mind
+<br />
+• Mission .pbo must match standard naming convention to avoid being rejected by
+archub
+<br />
+◦ ARC_[COOP | TVT | ADE]_MissionName_Author
+<br />
+◦ Please use Pascal Case for the mission name (capitalize every word)
+<br />
+◦ Do not use spaces or special characters in your mission file name
+<br />
+• Remember to use in editor comments or Admin briefing to explain certain
+aspects or objectives.
+<br />
+• Missions exported from eden editor can be find in your arma 3 folder
+<br />
+◦ example:
+<b>C:\Program Files (x86)\Steam\steamapps\common\Arma 3\MPMissions</b>
+<br />
+• Missions uploaded to ARCHUB should be ready for play testing.
+<br />
+• After uploading your mission, leave a note on the hub briefly explaining the
+mission and your expectations. Or use Admin Brief (admin.sqf)
+<br />
+• Missions must have a Zeus running them, even if the mission is autonomous.
+<br />
+• Do not Zeus from a JIP unit, use either the game master slot or create a
+specific Zeus unit with game master tag.
+<br />
+</p>
+
+<h2>Briefing</h2>
+
+<p><b>
+**Any key or mission critical information should be noted more than once.**
+</b></p>
+• Situation Section:
+<br />
+◦ General background for the mission.
+<br />
+◦ Flavor text, and any key lore surrounding the mission.
+<br />
+◦ Weather information.
+<br />
+• Mission Section:
+<br />
+◦ Where are the players located?
+<br />
+◦ What is going on?
+<br />
+◦ What is their objective?
+<br />
+◦ Any failure states for the mission.
+<br />
+• Friendly Forces:
+<br />
+◦ What friendly elements can players expect in the AO.
+<br />
+◦ Are there active friendly AI on the field?
+<br />
+◦ Do the friendly's have separate radio channels?
+<br />
+• Enemy Forces:
+<br />
+◦ What kind of enemy forces should players expect?
+<br />
+◦ Can be broad strokes, or a highly detailed roster of enemy forces.
+<br />
+• Movement Plan:
+<br />
+◦ How you expect players to traverse the mission.
+<br />
+◦ Any expected blockers of movement (roadblocks, IEDs, etc)
+<br />
+• Commander's Intent:
+<br />
+◦ How you as a mission maker expect them to handle the mission.
+<br />
+◦ Any pertinent information that you would like player commanders to keep in
+mind while drafting a plan.
+<br />
+• Fire support plan:
+<br />
+◦ Note any friendly CAS strikes or artillery fire missions players should
+expect.
+<br />
+◦ Should cover player controlled assets as well (Mortar, Helicopter support,
+etc)
+<br />
+◦ Should also cover any fire support outside players control.
+<br />
+• Special Tasks:
+<br />
+◦ Any secondary objective not noted in the mission section.
+<br />
+◦ Any extra objectives you would like commanders to consider when drafting
+their plan.
+<br />
+• Administration:
+<br />
+◦ A clear and concise list of any vehicles/priority assets players have at
+their disposal.
+<br />
+◦ Anything from general transport vics, to high tier assets such as CAS birds,
+and artillery.
+<br />
+◦ This should note a resupply plan if one is applicable.
+<br />
+• Mod Specific Information:
+<br />
+◦ Specific information relating to either resource-dependent mods or rarely used
+mods
+<br />
+• For Example: When using fortify; add a tab with budget, items accessible, and
+item cost.
+<br />
+<p>
+
+</p>
+
 </body>
 </html>
