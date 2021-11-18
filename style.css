@@ -1,0 +1,22 @@
+* {
+    font-family: proxima nova, nunito, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #22292F;
+}
+
+h3 {
+    color: #373A49;
+}
+h4 {
+    color: #373A49;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
